@@ -1,3 +1,28 @@
-.error{
+@charset "utf-8";
+
+.error {
 	color: red;
+}
+
+#wrapper {
+	width: 100%;
+}
+
+#header {
+	width: 80%;
+	margin: 0 auto;
+	height: 40px;
+	line-height: 40px;
+	margin-bottom: 10px;
+}
+
+#main {
+	width: 80%;
+	margin: 0 auto;
+}
+
+p#title {
+	font-size: 30px;
+	font-weight: bold;
+	display: inline;
 }

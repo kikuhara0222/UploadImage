@@ -2,18 +2,21 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8" />
+<link rel="stylesheet" type="text/css" href="css/common.css"
+	th:href="@{/css/common.css}" />
+
 <title>変換結果出力ページ</title>
 </head>
-<body>
 
-<body>
-	<h1>リサイズ後画像</h1>
-	<img src="aaa.jpg" th:src="'image/' + ${filePath}" ></img>
-	<br/>
-	
-	<a href="/index">アップロードに戻る</a>
-	
-</body>
-
+<body onload="reloadCheck()">
+	<div id="wrapper">
+		<div id="header">
+			<p id="title">リサイズ後画像</p>
+		</div>
+		<div id="main">
+			<img src="aaa.jpg" th:src="'image/' + ${filePath}"></img> <br /> <a
+				href="/index">アップロードに戻る</a>
+		</div>
+	</div>
 </body>
 </html>
