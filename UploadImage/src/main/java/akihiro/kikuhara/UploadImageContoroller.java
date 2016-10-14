@@ -41,7 +41,7 @@ public class UploadImageContoroller {
 			outPutName = outputPath + "resize_image.jpg";
 			ImageIO.write(bufImg, "JPG", new File(outPutName));
 			// Eclipseが置き換える間処理を止める
-			Thread.sleep(2000);
+			//Thread.sleep(2000);
 		} catch (Exception e) {
 			e.printStackTrace();
 			redirectAttributes.addAttribute("msg", "エラーが発生しました");
