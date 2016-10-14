@@ -28,7 +28,7 @@ public class UploadImageContoroller {
 		return "index";
 	}
 
-	//リサイズ処理
+	// リサイズ処理
 	@RequestMapping("/resize")
 	public String reSize(@RequestParam MultipartFile uploadImg, RedirectAttributes redirectAttributes, Model model) {
 		String outputPath = properties.getOutPath();
@@ -40,14 +40,15 @@ public class UploadImageContoroller {
 			bufImg = res.reSize(uploadImg.getInputStream(), 300, 300);
 			outPutName = outputPath + "resize_image.jpg";
 			ImageIO.write(bufImg, "JPG", new File(outPutName));
+			// Eclipseが置き換える間処理を止める
+			Thread.sleep(2000);
 		} catch (Exception e) {
-			System.out.println("================");
 			e.printStackTrace();
 			redirectAttributes.addAttribute("msg", "エラーが発生しました");
 			return "redirect:/index";
 		}
-
 		model.addAttribute("filePath", "resize_Image.jpg");
 		return "newimage";
+
 	}
 }
