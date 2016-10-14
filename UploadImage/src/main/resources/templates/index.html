@@ -2,20 +2,22 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8" />
-<link rel="stylesheet" type="text/css" href="css/common.css" th:href="@{/css/common.css}" />
+<link rel="stylesheet" type="text/css" href="css/common.css"
+	th:href="@{/css/common.css}" />
 <title>アップロードページ</title>
 </head>
 <body>
-
-<body>
-	<h1>リサイズ画像アップロードページ</h1>
-	
-	<h3 th:text="${msg}" class="error"></h3>	
-	<form action="/resize" method="post" enctype="multipart/form-data">
-		<input type="file" name="uploadImg" />
-		<input type="submit" value="送信" />
-	</form>
-</body>
-
+	<div id="wrapper">
+		<div id="header">
+			<p id="title">リサイズ画像アップロードページ</p>
+		</div>
+		<div id="main">
+			<h3 th:text="${msg}" class="error"></h3>
+			<form action="/resize" method="post" enctype="multipart/form-data">
+				<input type="file" name="uploadImg" /> <input type="submit"
+					value="送信" />
+			</form>
+		</div>
+	</div>
 </body>
 </html>

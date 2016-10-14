@@ -3,17 +3,24 @@
 <head>
 <meta charset="UTF-8" />
 <title>変換結果出力ページ</title>
+<link rel="stylesheet" type="text/css" href="css/common.css"
+	th:href="@{/css/common.css}" />
+<link rel="stylesheet" type="text/css" href="css/newimage.css"
+	th:href="@{/css/newimage.css}" />
+<script type="text/javascript" th:src="@{/js/jquery-3.1.1.min.js}"></script>
 </head>
-<body>
 
 <body>
-	<h1>リサイズ後画像</h1>
-	<img src="aaa.jpg" th:src="'image/' + ${filePath}" ></img>
-	<br/>
-	
-	<a href="/index">アップロードに戻る</a>
-	
-</body>
-
+	<div id="wrapper">
+		<div id="header">
+			<p id="title">リサイズ後画像</p>
+		</div>
+		<div id="main">
+			<div id="imgBox">
+				<img src="aaa.jpg" th:src="'image/' + ${filePath}"></img> <br />
+			</div>
+			<a href="/index">アップロードに戻る</a>
+		</div>
+	</div>
 </body>
 </html>
